@@ -5,35 +5,18 @@ const oldNorseSort = (a, b) => {
 
   const alphabet = buildAlphabet()
 
-  const indexA = alphabet.indexOf(a[0])
-  const indexB = alphabet.indexOf(b[0]);
+  const indexA = alphabet.indexOf(a[0].toLowerCase())
+  const indexB = alphabet.indexOf(b[0].toLowerCase())
 
   if (indexA === indexB) {
-    if (a < b) {
-      return -1;
-    } if (a > b) {
-      return 1;
-    }
-    return 0;
+    return a.localeCompare(b, 'is')
   }
   return indexA - indexB;
 }
 
-/**
- * Based on alphabet constant, but adds both upper & lowercase variants in order.
- */
+
 const buildAlphabet = () => {
-  const alphabet = []
-
-  LOWER_CASE.forEach((letter) => {
-    alphabet.push(letter)
-    alphabet.push(letter.toUpperCase())
-  })
-
-  alphabet.push('ö')
-  alphabet.push('Ö')
-
-  return alphabet.join('')
+  return [...LOWER_CASE, 'ö'].join('')
 }
 
 module.exports = {

@@ -1,6 +1,6 @@
 {
   "name": "old-norse-alphabet-sort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sort arrays by Old Norse alphabetical order",
   "main": "index.js",
   "repository": "https://github.com/stscoundrel/old-norse-alphabet-sort.git",

@@ -9,7 +9,7 @@ describe('Old Norse Alphabet sort', () => {
 
   test('Sorts by Old Norse alphabet', () => {
     const words = ['öðli', 'ógnan', 'æðrask', 'aðili', 'þakkan', 'áfir', 'á-auki', 'él-ligr', 'maðka', 'ef-lauss', 'œgir', 'áðr', 'maðr', 'madr', 'mæðr', ]
-    const expected = ['aðili', 'á-auki', 'áðr', 'áfir', 'ef-lauss', 'él-ligr', 'maðka', 'madr', 'maðr', 'mæðr', 'ógnan', 'þakkan', 'æðrask', 'œgir', 'öðli']
+    const expected = ['aðili', 'á-auki', 'áðr', 'áfir', 'ef-lauss', 'él-ligr', 'madr', 'maðka', 'maðr', 'mæðr', 'ógnan', 'þakkan', 'æðrask', 'œgir', 'öðli']
     const result = [...words].sort((a, b) => oldNorseSort(a, b))
 
     expect(result).toEqual(expected)

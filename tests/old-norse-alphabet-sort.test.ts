@@ -14,12 +14,4 @@ describe('Old Norse Alphabet sort', () => {
 
     expect(result).toEqual(expected);
   });
-
-  test('Normal way sucks', () => {
-    const words = ['öðli', 'ógnan', 'æðrask', 'aðili', 'þakkan', 'áfir', 'á-auki', 'él-ligr', 'maðka', 'ef-lauss', 'œgir', 'áðr', 'maðr', 'madr', 'mæðr'];
-    const expected = ['aðili', 'á-auki', 'áðr', 'áfir', 'ef-lauss', 'él-ligr', 'madr', 'maðka', 'maðr', 'mæðr', 'ógnan', 'þakkan', 'æðrask', 'œgir', 'öðli'];
-    const result = [...words].sort((a, b) => a.localeCompare(b, 'is'));
-
-    expect(result).toEqual(expected);
-  });
 });

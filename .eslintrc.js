@@ -1,6 +1,12 @@
 module.exports = {
-  extends: 'airbnb-base',
-  plugins: ['jest'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'airbnb-base',
+  ],
+  plugins: [
+    'jest',
+    '@typescript-eslint',
+  ],
   env: {
     node: true,
     es6: true,
@@ -10,9 +16,7 @@ module.exports = {
     document: true,
   },
   rules: {
-    semi: 0,
-    'no-console': 0,
-    'consistent-return': 0,
-    'no-use-before-define': 0,
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
   },
-}
+};

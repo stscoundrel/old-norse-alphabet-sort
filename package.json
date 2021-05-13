@@ -37,8 +37,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "test": "jest --verbose --runInBand --passWithNoTests",
+    "test:unit": "jest --verbose --runInBand --passWithNoTests",
     "build": "tsc",
-    "prepublishOnly": "yarn build && yarn lint && yarn test"
+    "prepublishOnly": "yarn build && yarn lint && yarn test:unit"
   }
 }

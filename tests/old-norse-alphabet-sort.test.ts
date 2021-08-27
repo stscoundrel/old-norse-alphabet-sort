@@ -14,4 +14,12 @@ describe('Old Norse Alphabet sort', () => {
 
     expect(result).toEqual(expected);
   });
+
+  test('Sorts applied after second letter (issue #45)', () => {
+    const words = ['Mælingar', 'Minnisatriði'];
+    const expected = ['Minnisatriði', 'Mælingar'];
+    const result = [...words].sort((a, b) => oldNorseSort(a, b));
+
+    expect(result).toEqual(expected);
+  });
 });

@@ -22,4 +22,12 @@ describe('Old Norse Alphabet sort', () => {
 
     expect(result).toEqual(expected);
   });
+
+  test('Sorts cases with identical words (issue #48)', () => {
+    const words = ['aðili', 'maðka', 'þakkan', 'maðka'];
+    const expected = ['aðili', 'maðka', 'maðka', 'þakkan'];
+    const result = [...words].sort((a, b) => oldNorseSort(a, b));
+
+    expect(result).toEqual(expected);
+  });
 });

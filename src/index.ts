@@ -1,7 +1,7 @@
 import { LOWER_CASE } from 'old-norse-alphabet';
 
 function buildAlphabet(): string {
-  return [...LOWER_CASE, 'ö'].join('');
+  return ['-', ...LOWER_CASE, 'ö', 'x', 'z'].join('');
 }
 
 const compare = (a: string, b: string, index: number, alphabet: string) : number => {

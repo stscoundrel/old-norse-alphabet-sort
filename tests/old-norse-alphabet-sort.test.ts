@@ -46,4 +46,12 @@ describe('Old Norse Alphabet sort', () => {
 
     expect(result).toEqual(expected);
   });
+
+  test('Notices word length when sorting', () => {
+    const words = ['aðild', 'AÐAL', 'abbast', 'aðal-vellir', 'AÐA', 'abbindi'];
+    const expected = ['abbast', 'abbindi', 'AÐA', 'AÐAL', 'aðal-vellir', 'aðild'];
+    const result = [...words].sort((a, b) => oldNorseSort(a, b));
+
+    expect(result).toEqual(expected);
+  });
 });

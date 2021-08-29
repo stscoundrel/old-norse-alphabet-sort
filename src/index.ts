@@ -5,12 +5,15 @@ function buildAlphabet(): string {
 }
 
 const compare = (a: string, b: string, index: number, alphabet: string) : number => {
-  if (a === b) {
+  if (a.toLocaleLowerCase() === b.toLocaleLowerCase()) {
     return 0;
   }
 
   const indexA: number = alphabet.indexOf(a[index]?.toLowerCase());
   const indexB: number = alphabet.indexOf(b[index]?.toLowerCase());
+
+  if (indexA === -1) return 1;
+  if (indexB === -1) return -1;
 
   if (indexA === indexB) {
     const newIndex = index + 1;

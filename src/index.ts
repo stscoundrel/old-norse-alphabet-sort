@@ -9,11 +9,14 @@ const compare = (a: string, b: string, index: number, alphabet: string) : number
     return 0;
   }
 
+  if (a.length <= index) return -1;
+  if (b.length <= index) return 1;
+
   const indexA: number = alphabet.indexOf(a[index]?.toLowerCase());
   const indexB: number = alphabet.indexOf(b[index]?.toLowerCase());
 
-  if (indexA === -1) return 1;
-  if (indexB === -1) return -1;
+  if (indexA === -1 && indexB !== -1) return 1;
+  if (indexB === -1 && indexA !== -1) return -1;
 
   if (indexA === indexB) {
     const newIndex = index + 1;

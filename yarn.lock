@@ -4098,9 +4098,9 @@ object.values@^1.1.6:
     es-abstract "^1.20.4"
 
 old-norse-alphabet@^1.1.2:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/old-norse-alphabet/-/old-norse-alphabet-1.2.3.tgz#7e916da1040b24ba2c488a32de71a5ae110d71dc"
-  integrity sha512-WCRU84cKk62fkVOHTUuun17gzH1cAaxmx/jYZKK2vL1uXIGCYnMbHsFz/hH6SAfEV6VooE5Hd8QA9cMhq0wh1A==
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/old-norse-alphabet/-/old-norse-alphabet-1.2.4.tgz#1cd1e1a558696de2ff9f49448b49d7ff1bf137d0"
+  integrity sha512-+n8fRxokFd79177PlHfeDoEQIgrbBy/qfZUQVZCdtKCNF2QxTHzcaJ33s5E6eVzjgzHO5RR8HefHVG1o/HtXcQ==
 
 once@^1.3.0:
   version "1.4.0"
